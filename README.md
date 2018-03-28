@@ -1,11 +1,9 @@
-# Kees-TM Admin CSS & JS tweaks
+# Kees-TM Version Checker
 
-Admin tweaks is a Drupal 8 module.
+Version checker is a Drupal 8 module.
 This module will:
 
-- Add A CSS and JS file to all admin pages
-- For now the only thing this will do is hide upload button when IMCE is active
-  - Needs more work
+- Add a json output for php version & drupal version
 
 ## Installation
 
@@ -16,7 +14,7 @@ ___
 
 ## Usage
 
-TODO: Write usage instructions
+Go to http://example.com/?app_version=1
 
 ## License
 
