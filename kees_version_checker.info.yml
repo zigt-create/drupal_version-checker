@@ -1,0 +1,6 @@
+name: Kees-TM Version Checker
+description: 'Adds the possibility to check the php & cms version'
+package: Kees-TM
+
+type: module
+core: 8.x

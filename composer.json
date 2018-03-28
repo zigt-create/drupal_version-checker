@@ -1,0 +1,13 @@
+{
+    "name": "keestm/version_checker",
+    "description": "Adds the possibility to check the php & cms version",
+    "type": "drupal-module",
+    "authors": [
+        {
+            "name": "Tom",
+            "role": "maintainer"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev"
+}
