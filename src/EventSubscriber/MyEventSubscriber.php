@@ -4,7 +4,7 @@
  * Contains \Drupal\my_event_subscriber\EventSubscriber\MyEventSubscriber.
  */
 
-namespace Drupal\kees_version_checker\EventSubscriber;
+namespace Drupal\version_checker\EventSubscriber;
 
 use Drupal;
 use Symfony\Component\HttpKernel\KernelEvents;

@@ -1,10 +1,14 @@
 {
-    "name": "keestm/version_checker",
+    "name": "estdigital/version_checker",
     "description": "Adds the possibility to check the php & cms version",
     "type": "drupal-module",
     "authors": [
         {
             "name": "Tom",
+            "role": "maintainer"
+        },
+        {
+            "name": "Aad",
             "role": "maintainer"
         }
     ],
