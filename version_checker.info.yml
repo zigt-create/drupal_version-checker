@@ -1,0 +1,6 @@
+name: Version Checker
+description: 'Gets server and cms information to show on the Est portal monitor'
+package: Est-Digital
+
+type: module
+core_version_requirement: ^8 || ^9
