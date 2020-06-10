@@ -1,51 +1,51 @@
 <?php
 /**
  * @file
- * Contains \Drupal\my_event_subscriber\EventSubscriber\MyEventSubscriber.
+ * Contains \Drupal\version_checker\EventSubscriber\Subscriber.
  */
 
 namespace Drupal\version_checker\EventSubscriber;
 
-use Drupal;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
- * Event Subscriber MyEventSubscriber.
+ * Event Subscriber Subscriber.
  */
-class MyEventSubscriber implements EventSubscriberInterface
+class Subscriber implements EventSubscriberInterface
 {
+    public static function getSubscribedEvents()
+    {
+        $events[KernelEvents::RESPONSE][] = ['onRespond'];
+        return $events;
+    }
+
     /**
      * Create app_version for the monitor
      *
      * @param FilterResponseEvent $event
      * @return JSON json response
      */
-    public function onRespond(FilterResponseEvent $event)
+    public function onRespond()
     {
-        if (isset($_GET['app_version']) && $_GET['app_version'] !== "") {
+        // Check if uri contains `app_version`
+        if (isset($_GET['app_version']) && $_GET['app_version'] != "") {
+            // Create data array.
             $data = [];
+            // Set the current versions of drupal and php.
             $data['app_version'] = \Drupal::VERSION;
             $data['php_version'] = phpversion();
-            $data['max_upload_size'] = ini_get('upload_max_filesize');
-            $data['max_post_size'] = ini_get('post_max_size');
-            $data['memory_limit'] = ini_get('memory_limit');
-            $data['max_execution_time'] = ini_get('max_execution_time');
             $data['cms'] = "Drupal";
-
+            // Set the headers to JSON.
             header('Access-Control-Allow-Origin: *');
             header('Content-Type: application/json');
-
+            // Display the JSON data to the screen and kill the rest of the page.
             echo json_encode($data);
             exit;
         }
     }
 
-    public static function getSubscribedEvents()
-    {
-        $events[KernelEvents::RESPONSE][] = ['onRespond'];
-        return $events;
-    }
+    
 
 }

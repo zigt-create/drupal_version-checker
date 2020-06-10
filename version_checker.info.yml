@@ -1,6 +1,6 @@
 name: Version Checker
-description: 'Adds the possibility to check the php & cms version'
+description: 'Gets server and cms information to show on the Est portal monitor'
 package: Est-Digital
 
 type: module
-core: 8.x
+core_version_requirement: ^8 || ^9

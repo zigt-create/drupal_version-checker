@@ -1,15 +1,14 @@
-# Kees-TM Version Checker
+# Version Checker
 
-Version checker is a Drupal 8 module.
-This module will:
+This module will show the following data on app_version request:
 
 - Add a json output for php version & drupal version
 
 ## Installation
 
-**On a drupal 8 project:**
+**On a drupal 8 and 9 projects:**
 
-***composer require keestm/version_checker***
+***composer require estdigital/version_checker***
 ___
 
 ## Usage
@@ -20,7 +19,7 @@ Go to http://example.com/?app_version=1
 
 MIT License
 
-Copyright &copy; 2018 Kees™ Internetbureau
+Copyright &copy; 2020 Est Digital BV.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
