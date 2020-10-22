@@ -32,27 +32,26 @@ class VersionCheckerRestResource extends ResourceBase {
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     $instance = parent::create($container, $configuration, $plugin_id, $plugin_definition);
     $instance->logger = $container->get('logger.factory')->get('version_checker');
-    // $instance->currentUser = $container->get('current_user');
     return $instance;
   }
 
-    /**
-     * Responds to GET requests.
-     *
-     * @param string $payload
-     *
-     * @return \Drupal\rest\ResourceResponse
-     *   The HTTP response object.
-     *
-     * @throws \Symfony\Component\HttpKernel\Exception\HttpException
-     *   Throws exception expected.
-     */
-    public function get() {
-        $payload['app_version'] = \Drupal::VERSION;
-        $payload['php_version'] = phpversion();
-        $payload['cms'] = 'Drupal';
+  /**
+   * Responds to GET requests.
+   *
+   * @param string $payload
+   *
+   * @return \Drupal\rest\ResourceResponse
+   *   The HTTP response object.
+   *
+   * @throws \Symfony\Component\HttpKernel\Exception\HttpException
+   *   Throws exception expected.
+   */
+  public function get() {
+    $payload['app_version'] = \Drupal::VERSION;
+    $payload['php_version'] = phpversion();
+    $payload['cms'] = 'Drupal';
 
-        return new ResourceResponse($payload, 200);
-    }
+    return new ResourceResponse($payload, 200);
+  }
 
 }
