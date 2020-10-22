@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Contains version_checker.module.
+ */
+
+use Drupal\user\Entity\Role;
+
+function version_checker_install() {
+  foreach(['anonymous', 'authenticated'] as $role) {
+    $role = Role::load($role);
+    $role->grantPermission('restful get version_checker_rest_resource');
+    $role->save();
+  }
+}
