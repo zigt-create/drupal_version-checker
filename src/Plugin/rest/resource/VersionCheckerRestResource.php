@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   id = "version_checker_rest_resource",
  *   label = @Translation("Version checker rest resource"),
  *   uri_paths = {
- *     "canonical" = "/app_version"
+ *     "canonical" = "/api/app_version"
  *   }
  * )
  */
@@ -31,7 +31,7 @@ class VersionCheckerRestResource extends ResourceBase {
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     $instance = parent::create($container, $configuration, $plugin_id, $plugin_definition);
-    $instance->logger = $container->get('logger.factory')->get('version_checker');
+    $instance->logger = $container->get('logger.factory')->get('api/version_checker');
     return $instance;
   }
 
