@@ -1,5 +1,0 @@
-services:
-  version_checker:
-    class: '\Drupal\version_checker\EventSubscriber\Subscriber'
-    tags:
-      - { name: 'event_subscriber' }
