@@ -1,8 +1,10 @@
-name: Version Checker
-description: 'Gets server and cms information to show on the Est portal monitor'
-package: Est-Digital
-version: 2.0.0
+name: 'ZIGT Create: Version Checker'
+description: 'Gets server and cms information to show on the portal monitor'
+package: ZIGT
+
 type: module
-core_version_requirement: ^8 || ^9
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+
 dependencies:
-    - rest
+  - drupal:rest
