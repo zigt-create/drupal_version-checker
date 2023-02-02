@@ -38,8 +38,6 @@ class VersionCheckerRestResource extends ResourceBase {
   /**
    * Responds to GET requests.
    *
-   * @param string $payload
-   *
    * @return \Drupal\rest\ResourceResponse
    *   The HTTP response object.
    *
