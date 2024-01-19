@@ -6,7 +6,7 @@ This module will show the following data on app_version request:
 
 ## Installation
 
-**On a drupal 8 and 9 projects:**
+**On a drupal 8, 9 and 10 projects:**
 
 ***composer require estdigital/version_checker***
 ___
