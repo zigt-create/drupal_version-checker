@@ -1,0 +1,4 @@
+restful get version_checker_rest_resource:
+  title: 'Restful get version_checker_rest_resource'
+  description: 'Allow access to the drupal version endpoint.'
+  restrict access: true
